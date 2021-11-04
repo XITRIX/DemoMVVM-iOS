@@ -28,6 +28,7 @@
 		7C2EF818273366AD002BADC4 /* MvvmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EF813273366AD002BADC4 /* MvvmViewController.swift */; };
 		7C2EF819273366AD002BADC4 /* MvvmViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EF814273366AD002BADC4 /* MvvmViewControllerProtocol.swift */; };
 		7C2EF81A273366AD002BADC4 /* MvvmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2EF815273366AD002BADC4 /* MvvmViewModel.swift */; };
+		7CA9AC4C2733EAB3009FF259 /* MvvmViewModelWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA9AC4B2733EAB3009FF259 /* MvvmViewModelWith.swift */; };
 		7CDE974B2731EDE300AE6192 /* MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE974A2731EDE300AE6192 /* MVVM.swift */; };
 		7CDE974D2731F23F00AE6192 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDE974C2731F23F00AE6192 /* HttpClient.swift */; };
 		7CF26E5927304C8600980B4B /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF26E5827304C8600980B4B /* Container.swift */; };
@@ -62,6 +63,7 @@
 		7C2EF813273366AD002BADC4 /* MvvmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmViewController.swift; sourceTree = "<group>"; };
 		7C2EF814273366AD002BADC4 /* MvvmViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmViewControllerProtocol.swift; sourceTree = "<group>"; };
 		7C2EF815273366AD002BADC4 /* MvvmViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvmViewModel.swift; sourceTree = "<group>"; };
+		7CA9AC4B2733EAB3009FF259 /* MvvmViewModelWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvmViewModelWith.swift; sourceTree = "<group>"; };
 		7CDE974A2731EDE300AE6192 /* MVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM.swift; sourceTree = "<group>"; };
 		7CDE974C2731F23F00AE6192 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		7CF26E5827304C8600980B4B /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
@@ -160,10 +162,10 @@
 		7C2EF810273366AD002BADC4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7C2EF814273366AD002BADC4 /* MvvmViewControllerProtocol.swift */,
+				7C2EF813273366AD002BADC4 /* MvvmViewController.swift */,
 				7C2EF811273366AD002BADC4 /* MvvmTableViewController.swift */,
 				7C2EF812273366AD002BADC4 /* MvvmCollectionViewController.swift */,
-				7C2EF813273366AD002BADC4 /* MvvmViewController.swift */,
-				7C2EF814273366AD002BADC4 /* MvvmViewControllerProtocol.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,6 +190,15 @@
 				7CF26E642730A46500980B4B /* DemoDetailsController */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7CA9AC4A2733EA9D009FF259 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7C2EF815273366AD002BADC4 /* MvvmViewModel.swift */,
+				7CA9AC4B2733EAB3009FF259 /* MvvmViewModelWith.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		7CDE97492731EDD500AE6192 /* Core */ = {
@@ -230,8 +241,8 @@
 		7CF26E5F2730A19500980B4B /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				7CA9AC4A2733EA9D009FF259 /* ViewModels */,
 				7C2EF810273366AD002BADC4 /* Controllers */,
-				7C2EF815273366AD002BADC4 /* MvvmViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -384,6 +395,7 @@
 				7C2EF7AD2732F0DD002BADC4 /* DemoDetailsViewController.swift in Sources */,
 				7CF26E682730A4AB00980B4B /* DemoDetailsViewModel.swift in Sources */,
 				7C2EF818273366AD002BADC4 /* MvvmViewController.swift in Sources */,
+				7CA9AC4C2733EAB3009FF259 /* MvvmViewModelWith.swift in Sources */,
 				7CF26E5927304C8600980B4B /* Container.swift in Sources */,
 				7C123A4A2722FE6500B18DB9 /* AppDelegate.swift in Sources */,
 				7C2EF7B52732F462002BADC4 /* UITableViewCell+Extensions.swift in Sources */,

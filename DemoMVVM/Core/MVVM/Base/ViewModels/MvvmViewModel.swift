@@ -6,9 +6,18 @@
 //
 
 import UIKit
+import ReactiveKit
 import Bond
 
-class MvvmViewModel {
+protocol MvvmViewModelProtocol: DisposeBagProvider {
+    var title: Observable<String?> { get }
+    var attachedView: UIViewController! { get }
+
+    func setAttachedView(_ viewController: UIViewController)
+}
+
+class MvvmViewModel: MvvmViewModelProtocol {
+    let bag = DisposeBag()
     let title = Observable<String?>(nil)
 
     func setAttachedView(_ viewController: UIViewController) {
@@ -19,8 +28,4 @@ class MvvmViewModel {
     private(set) weak var attachedView: UIViewController!
 
     required init() {}
-}
-
-class MvvmViewModelWith<T>: MvvmViewModel {
-    func prepare(with item: T) {}
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MvvmViewController<ViewModel: MvvmViewModel>: UIViewController, MvvmViewControllerProtocol {
+class MvvmViewController<ViewModel: MvvmViewModelProtocol>: UIViewController, MvvmViewControllerProtocol {
     var viewModel: ViewModel!
 
     override func viewDidLoad() {

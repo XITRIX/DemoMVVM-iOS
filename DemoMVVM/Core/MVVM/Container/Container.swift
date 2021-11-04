@@ -29,11 +29,17 @@ class Container {
     }
 
     // MARK: - Resolve
-    func resolve<T: Any>(type: T.Type) -> T? {
-        map[String(describing: type)]?.getter as? T
+    func resolve<T: Any>(type: T.Type) -> T {
+        if let obj = map[String(describing: type)]?.getter as? T {
+            return obj
+        }
+        fatalError("\(T.self) is not registered")
     }
 
-    func resolve<T: Any>() -> T? {
-        map[String(describing: T.self)]?.getter as? T
+    func resolve<T: Any>() -> T {
+        if let obj = map[String(describing: T.self)]?.getter as? T {
+            return obj
+        }
+        fatalError("\(T.self) is not registered")
     }
 }

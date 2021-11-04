@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MvvmViewControllerProtocol: UIViewController {
-    associatedtype ViewModel: MvvmViewModel
+    associatedtype ViewModel: MvvmViewModelProtocol
 
     var viewModel: ViewModel! { get set }
     func setViewModel(_ viewModel: ViewModel)

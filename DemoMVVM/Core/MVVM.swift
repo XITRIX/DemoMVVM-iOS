@@ -1,5 +1,5 @@
 //
-//  IoCContainer.swift
+//  MVVM.swift
 //  DemoMVVM
 //
 //  Created by Даниил Виноградов on 03.11.2021.
@@ -25,7 +25,16 @@ class MVVM {
 
 extension MVVM {
     func registerContainer() {
+        // Register services
         container.registerSingleton { Router(container: self.container) }
+
+        // Register ViewModels
+        container.register() { DemoViewModel() }
+        container.register() { DemoDetailsViewModel() }
+
+        // Register ViewControllers
+        container.register() { ViewController() }
+        container.register() { DemoDetailsViewController() }
     }
 
     func registerRouting() {

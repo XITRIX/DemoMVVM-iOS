@@ -9,13 +9,17 @@ import Foundation
 import ReactiveKit
 import Bond
 
-struct TestStruct {
+protocol DemoViewModelProtocol: MvvmViewModelProtocol {
+    var name: Observable<String?> { get }
+    var surname: Observable<String?> { get }
+    var age: Observable<Int?> { get }
+    var payAvailable: Observable<Bool> { get }
+    var payTitle: Observable<String?> { get }
 
+    func payButtonAction()
 }
 
-class DemoViewModel: MvvmViewModel, DisposeBagProvider {
-    let bag = DisposeBag()
-
+class DemoViewModel: MvvmViewModel, DemoViewModelProtocol {
     let name = Observable<String?>(nil)
     let surname = Observable<String?>(nil)
     let age = Observable<Int?>(nil)
